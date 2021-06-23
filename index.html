@@ -51,6 +51,9 @@
                     <h2 v-else>
                         Non ci sono Todo.
                     </h2>
+                    <button v-if="todos.length > 0" class="removeall">
+                        <i class="fas fa-trash-alt" @click="removeAllTodos()"> Cancella tutti i Todo</i>
+                    </button>
                 </div>
 
             </div>

@@ -130,3 +130,20 @@ li i {
     bottom: 5px;
     font-size: 18px;
 }
+
+.removeall {
+    background-color: rgb(233, 233, 233);
+}
+
+.removeall i {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    left: 650px;
+}
+
+.removeall:hover i {
+    color: rgb(238, 82, 68);
+    font-size: 25px;
+}
