@@ -15,11 +15,46 @@
 <body>
 
     <header>
-        
+        <i class="fas fa-search search"> Quick Find</i>
+
+        <div class="btn">
+            <i class="fas fa-calendar-plus calendar"></i>
+            <i class="fas fa-bars menu"></i>
+            <i class="far fa-user"></i>
+        </div>
     </header>
 
     <main>
+        <div class="section-left">
+            <i class="fas fa-calendar-day"> Today</i>
+            <br>
+            <i class="fas fa-calendar-day"> Week</i>
+            <br>
+            <i class="fas fa-calendar-day"> Month</i>
+        </div>
+        <div class="section-right">
+            <div id="app">
+                <div class="logo">
+                    <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
+                </div>
+                <div class="new-todo">
+                    <input @keyup.enter="addTodo" type="text" placeholder="Nuovo Todo" v-model="newTodo">
+                    <button  @click="addTodo">Aggiungi</button>
+                </div>
+                <div class="todos-container">
+                    <ul v-if="todos.length > 0">
+                        <li class="todo" v-for="(item, index) in todos"> 
+                            {{ index }} {{ item }} 
+                            <i class="fas fa-trash-alt" @click="removeTodo(index)"></i>
+                        </li> 
+                    </ul>
+                    <h2 v-else>
+                        Non ci sono Todo.
+                    </h2>
+                </div>
 
+            </div>
+        </div>
     </main>
     
 
